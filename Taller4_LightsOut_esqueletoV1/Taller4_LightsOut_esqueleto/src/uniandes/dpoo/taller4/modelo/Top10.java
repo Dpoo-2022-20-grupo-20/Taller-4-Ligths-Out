@@ -1,6 +1,7 @@
 package uniandes.dpoo.taller4.modelo;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,6 +15,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
 
 /**
  * Esta clase sirve para representar la lista de los records que se encuentran
@@ -57,6 +61,21 @@ public class Top10
 	 */
 	public Top10()
 	{
+		public static void main(String [] args) {
+			JFrame frame = new JFrame (); //crea el frame
+			frame.setTitle("Top 10");// añade el titulo al frame	
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //permite salir del frame :)
+			frame.setResizable(false);//evita que se pueda cambiar el tamanño de la app
+			frame.setSize(420,420);//pone el tamaño del frame en x e y
+			frame.setVisible(true); //hace que el frame sea visible
+			ImageIcon image = new ImageIcon("LightsOutLogo.png");//crea la imagen del icono
+			frame.setIconImage(image.getImage());//cambia la imagen del icono dedl frame
+			frame.getContentPane().setBackground(new Color(204,204,255)); //cambia el color del frame
+			JLabel label = new JLabel();
+			label.setText("# Nombre");
+			
+			frame.add(label);
+	}
 		// Construye una nueva cola de prioridades y la inicializa con un
 		// comparador para Registros. Este comparador se usará cada vez
 		// que se agregue un elemento a la cola y se basará en los puntos.
